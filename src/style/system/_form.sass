@@ -1,0 +1,75 @@
+.form
+  &__item
+    margin-bottom: 15px
+    position: relative
+  &__input
+    line-height: 40px
+    width: 100%
+    padding:  0 50px 0 15px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    box-shadow: inset 2px 2.3px 7px 0 rgba(0, 0, 0, 0.35)
+    background-color: #fff
+    letter-spacing: 0.5px
+    +fz(18)
+    font-weight: 400
+    transition: all .25s
+    color: #42031d
+    &::placeholder
+      color: darken(#b0afaf, 5%)
+  &__textarea
+    height: 200px
+    resize: vertical
+    padding:  10px 15px
+    line-height: 1.5
+  &__footer
+    margin-top: 20px
+  &__button
+    width: 100%
+    transition: all .25s
+    border-radius: 5px
+    text-align: center
+    line-height: 40px
+    color: #fff
+    background-color: #42031d
+    border-color: darken(#42031d, 4%)
+    +fz(19)
+    letter-spacing: 0.6px
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    &:hover
+      background-color: darken(#42031d, 4%)
+  &__personal
+    margin-top: 10px
+    color: #fff
+    +fz(13)
+    a
+      text-decoration: none
+      color: #42031d
+.input
+  &__icon
+    position: absolute
+    transform: translateY(-50%)
+    top: 50%
+    background-repeat: no-repeat
+    background-position: center
+    opacity: .4
+    transition: all .25s
+    right: 10px
+    &_user
+      width: 21px
+      height: 20px
+      background-image: url(../img/form-user.png)
+    &_phone
+      width: 20px
+      height: 20px
+      background-image: url(../img/form-phone.png)
+.form
+  &__item
+    &.hover
+      .input__icon
+        opacity: .7
+    &.focus
+      .input__icon
+        opacity: 1

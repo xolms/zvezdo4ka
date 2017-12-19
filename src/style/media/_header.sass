@@ -1,0 +1,99 @@
+@media screen and (max-width: 1170px)
+  .container_head
+    padding-left: 10px
+    padding-right: 10px
+@media screen and (max-width: 1050px)
+  .callback
+    &__text
+      +fz(16)
+    &__image
+      width: 25px
+      height: 25px
+  .logo
+    &__img
+      width: 60px
+      height: auto
+    &__text
+      +fz(18)
+@media screen and (max-width: 992px)
+  .callback
+    flex-wrap:  wrap
+    &__wrapper
+      flex-basis: 50%
+      width: 50%
+      &_map
+        display: none
+@media screen and (max-width: 768px)
+  .container_head
+    display: block
+    border-bottom: 2px solid $dark-indigo
+    padding-bottom: 10px
+    position: relative
+  .mobile-mnu
+    .container_head
+      border-bottom: none
+    .callback
+      display: block
+    .logo
+      margin-bottom: 10px  
+  .logo
+    text-align: center
+
+    &__img
+      width: 100px
+    &__text
+      text-align: left
+      +fz(20)
+  .callback
+    width: 100%
+    display: none
+    &__wrapper
+      display: inline-block
+      text-align: center
+      width: 49%
+      vertical-align: top
+      &_map
+        margin-top: 10px
+        display: block
+        width: 100%
+    &__image
+      width: 35px
+      height: 35px
+    &__text
+      +fz(20)
+
+
+  .logo
+    +clearfix
+  .logo__link
+    float: left
+  .burger
+    display: inline-block
+    float: right
+    cursor: pointer
+    line-height: 97px
+    position: relative
+    z-index: 101
+    &__img
+      width: 40px
+      vertical-align: middle
+      fill: $dark-plum
+
+@media screen and (max-width: 500px)
+  .callback
+    &__wrapper
+      width: 100%
+      margin-bottom: 10px
+      &_map
+        margin-top: 0
+    &__image
+      width: 30px
+      height: 30px
+    &__text
+      +fz(18)
+  .logo__text
+    display: none
+  .logo__img
+    width: 80px
+  .burger
+    line-height: 75px

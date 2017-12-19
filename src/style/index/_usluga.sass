@@ -1,0 +1,61 @@
+.usluga
+  flex-basis: 48%
+  width: 48%
+  overflow: hidden
+  border-radius: 10px
+  border: 2px solid #42031d
+  background-color: #ece5e8
+  transition: all .25s
+  &:hover
+    box-shadow: 2.6px 3px 6.8px 1.2px rgba(0, 0, 0, 0.35)
+  &__img
+    width: 100%
+    img
+      height: 100%
+      width: auto
+      max-height: 300px
+  &__title
+    text-align: center
+    +fz(30)
+    font-weight: 700
+    color: #42031d
+    letter-spacing: 0.9px
+  &__text
+    padding: 0 20px 20px
+    letter-spacing: 0.5px
+    +fz(16)
+    color: #000
+  &__footer
+    max-width: 200px
+    width: 100%
+    margin: 0 auto
+    padding-bottom: 20px
+    text-align: center
+
+.blog__index
+  flex-basis: 32%
+  width: 32%
+@media screen and (max-width: 1170px)
+  .container_uslugi
+    padding-left: 10px
+    padding-right: 10px
+  .usluga__img img
+    height: auto
+    width: 100%
+    max-width: 100%
+@media screen and (max-width: 992px)
+  .container_blog
+    flex-wrap: wrap
+  .blog__index
+    flex-basis: 100%
+    width: 100%
+    margin-bottom: 20px
+@media screen and (max-width: 768px)
+  .usluga
+    flex-basis: 100%
+    width: 100%
+    margin-bottom: 20px
+  .container_uslugi
+    flex-wrap: wrap
+    padding-left: 20px
+    padding-right: 20px

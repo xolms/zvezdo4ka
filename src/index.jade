@@ -1,0 +1,66 @@
+extends jade/template
+block includes
+	include jade/mixins/**/*.jade
+block title
+	title 123
+	- var back = '#000';
+	- var navColor = 'green';
+block content
+	header.head.head-second.bg-cover
+		.head__topline
+			.container-flex
+				+logo-toplinedark
+				+rightheaddark
+		+navmain(navColor)
+		+fixednav(navColor)
+		+mobile-menu
+	+breadcrumbs
+	.content__wrap
+		.content__left
+			.aside__wrapper
+				.aside__wrap
+					+aside(navColor)
+					.aside__bottom
+						p Вы можете получить анализ своего сайта совершенно бесплатно!
+						a(data-theme='Вопрос' data-modal='.modal_ask' href="#").modal-open.button.button-red.button-head Получить бесплатно
+		.content__right
+			h1.content__title.content__title_dark Рекламные агенства
+			.container-flex.container-text
+				img(src="http://loremflickr.com/270/290" alt="123" style="float:left").img_left
+				p Мы предлагаем
+				ul
+					li от 5 до 15% с каждого заказа
+					li Статус партнёра на портале “Орекламе.рф”
+					li Выплаты в течении 3 дней после закрытия сделки
+					li Комплексный подход, не только создание сайта
+					li Скидку на наши услуги
+				.container__buttons
+					button.button_left.modal-open(data-modal='.modal_ask' data-theme="Получить презентацию") Получить презентацию
+					button.button_right.modal-open(data-modal='.modal_ask' data-theme="Заказать звонок") Заказать звонок
+				h2 Почему рекламным агентствам выгодно с нами работать?
+				p Самое главное - это быстрый результат с минимальными вложениями. Чтобы была возможность проверить гипотезу развития бизнеса или в быстрые сроки окупить вложения в товар.Поэтому техническая сторона вопроса, красота и уникальная разработка не нужны.
+				p Своим клиентов, которые являются индивидуальными предпринимателями, и имеют малый, семейный или сервисный бизнес, мы предлагаем быстрые шаблонные решения и простейшую реализацию поставленных задач.
+				h2 Как это работает?
+				p Мы с командой определяем, что в приоритете для клиента, подбираем оптимальный вариант работы, запускаем тестовую страницу и занимаемся продвижением в социальных медиа.
+				p Клиент видит нашу работу уже в первые дни. По мере роста проекта, вносим измененияи добавляем необходимые функции для увеличения посетителей, конверсии и эффективностиработы, как сайта, так и всего бизнеса.
+			h2.content__title.content__title_dark Еще работы из нашего портфолио
+			.container-flex.container-work
+				+page-work('empty', 'small')
+				+page-work('empty', 'small')
+				+page-work('empty', 'small')
+
+			.container__form
+				.callback__wrapper
+					h2.callback__title.callback__title_dark Хотите стать нашим партнёром?<br/>Оставьте заявку<br/>и наш специалист свяжется с вами.
+					form(method="POST")
+						.callback__form
+							.callback__item
+								input(type="text" placeholder="Обращение" name="name" required).callback__input.callback__input_dark
+							.callback__item
+								input(type="tel" placeholder="Телефон" name="tel" required).callback__input.callback__input_dark
+							.callback__item
+								textarea(name='text' placeholder='Опишите кратко о себе и своём бизнесе.').callback__input.callback__textarea.callback__input_dark
+							.callback__item
+								button.callback__button.callback__button_green Отправить
+
+

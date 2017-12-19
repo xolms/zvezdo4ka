@@ -1,0 +1,74 @@
+@import "bourbon"
+@import "neat"
+
+@import "fonts"
+@import "vars"
+@import "mixins"
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	-webkit-font-smoothing: antialiased
+
+html
+	height: 100%
+
+body
+	padding: 0
+	min-width: 320px
+	margin: 0
+	overflow-x: hidden
+	font-weight: 400
+	width: 100%
+	height: 100%
+	font-size: 16px
+	font-family: Roboto, sans-serif
+	line-height: 1.5
+
+.wrapper
+	display: table
+	height: 100%
+	width: 100%
+
+.content
+	display: table-row
+	height: 100%
+	width: 100%
+
+.container
+	max-width: 1170px
+	width: 100%
+	margin: 0 auto
+	&_flex
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+	&_jc
+		justify-content: space-between
+	&_fwn
+		flex-wrap: nowrap
+	&_fw
+		flex-wrap: wrap
+
+@import "header/*"
+@import "nav/*"
+@import "system/*"
+@import "sliders/*"
+@import "tovar/*"
+@import "index/*"
+
+
+.mobile-mnu
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	overflow-y: scroll
+	display: none
+@import "media/*"

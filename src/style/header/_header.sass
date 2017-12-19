@@ -1,0 +1,54 @@
+
+.container_head
+  align-items: center
+  background-color: #fff
+  padding: 10px 0
+.burger
+  display: none
+.logo
+  &__img
+    vertical-align: middle
+  &__text
+    vertical-align: middle
+    display: inline-block
+    color: $dark-indigo-two
+    padding-left: 8px
+    +fz(22)
+    font-weight: 300
+  a
+    text-decoration: none
+.callback
+  width: 60%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  &__wrapper
+    width: (100/3)+0%
+    flex-basis: (100/3)+0%
+  &__item:nth-child(2)
+    margin-top: 5px
+  &__link
+    text-decoration: none
+    display: block
+    &:hover
+      .callback
+        &__image
+          fill: $dark-plum
+        &__text
+          color: $dark-plum
+  &__image
+    width: 30px
+    height: 30px
+    fill: $dark-indigo
+    vertical-align: middle
+    border-radius: 10em
+    transition: all .25s
+  &__text
+    vertical-align: top
+    color: $dark-indigo
+    +fz(18)
+    padding-left: 8px
+    transition: all .25s
+    font-weight: 300

@@ -1,0 +1,104 @@
+.tovar
+  transition: all .25s
+  box-shadow: 2px 3.5px 6.8px 1.2px rgba(0, 0, 0, 0.15)
+  background-color: #fff
+  border-radius: 10px
+  &:hover
+    box-shadow: 2px 3.5px 6.8px 1.2px rgba(0, 0, 0, 0.35)
+  &__head
+    text-align: center
+    padding-top: 20px
+    a
+      max-width: 250px
+      width: 100%
+      display: block
+      margin: 0 auto
+      overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__title
+    padding: 10px 0
+    text-align: center
+    +fz(20)
+    letter-spacing: 0.6px
+    font-weight: 400
+    color: $dark-plum
+    a
+      text-decoration: none
+      color: $dark-plum
+  &__price
+    background-color: $dark-indigo
+    text-align: center
+    padding: 10px 0
+    b
+      color: #fff
+      letter-spacing: 0.7px
+      +fz(22)
+  &__info
+    max-width: 200px
+    width: 100%
+    text-align: center
+    margin: 5px auto
+
+    &__item
+      height: 40px
+      line-height: 40px
+      span
+        width: 25px
+        background-repeat: no-repeat
+        background-position: center
+        height: 33px
+        display: inline-block
+
+      p
+        display: inline-block
+        vertical-align: top
+        position: relative
+        +fz(18)
+        letter-spacing: 0.5px
+        padding-left: 4px
+      &_garant
+        span
+          background-image: url(../img/garant.png)
+          background-size: 25px 25px
+        p
+          color: #000
+      &_rent
+        span
+          background-image: url(../img/rent.png)
+          background-size: 25px 33px
+        p
+          color: $dark-indigo
+      &_cell
+        span
+          background-image: url(../img/cell.png)
+          background-size: 25px 24px
+        p
+          color: #42031d
+  &__footer
+    text-align: center
+    margin: 0px auto
+    max-width: 200px
+    width: 100%
+    padding: 10px 0 30px
+  &__button
+    border: none
+    display: block
+    width: 100%
+    transition: all .25s
+    border-radius: 5px
+    background-color: #42031d
+    color: #ffffff
+    height: 40px
+    line-height: 40px
+    text-decoration: none
+    letter-spacing: 0.6px
+    font-weight: 300
+    +fz(19)
+    &:hover
+      background-color: darken(#42031d, 2%)
+
+@media screen and (max-width: 992px)
+  .tovar__head a
+    width: 200px

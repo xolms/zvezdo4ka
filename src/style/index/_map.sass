@@ -1,0 +1,39 @@
+.map
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  max-width: 1170px
+  width: 100%
+  justify-content: space-between
+  flex-wrap: nowrap
+  margin: 0 auto
+  align-items: center
+  &__right
+    width: 48%
+    flex-basis: 48%
+  &__left
+    width: 48%
+    flex-basis: 48%
+    iframe
+      width: 100%
+      border: none
+      height: 500px
+  &__form
+    background-color: #525359
+    box-shadow: 2px 2.3px 7px 0 rgba(0, 0, 0, 0.35)
+    padding: 25px 30px
+    border-radius: 10px
+@media screen and (max-width: 992px)
+  .map
+    flex-wrap:  wrap
+    &__left
+      width: 100%
+      flex-basis: 100%
+      margin: 0 auto
+    &__right
+      width: 98%
+      flex-basis: 98%
+      margin: 0 auto
+      .section__title
+        margin-top: 20px
+        margin-bottom: 10px  

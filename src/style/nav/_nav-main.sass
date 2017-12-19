@@ -1,0 +1,47 @@
+.blue-bg
+  background-color: $dark-indigo
+  padding-top: 2px
+  border-bottom: 1px solid $dark-indigo
+  margin-top: 20px
+
+.main-nav
+  ul
+    list-style-type: none
+    li
+      display: block
+      width: (100/5)+0%
+      text-align: center
+      position: relative
+      overflow: hidden
+      a
+        display: block
+        padding: 10px 0
+        text-decoration: none
+        position: relative
+        z-index: 3
+        +fz(20)
+        transition: all .25s
+        color: #fff
+      &::before
+        content: ''
+        background-color: darken(#fff, 5%)
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        height: 100%
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+        transition: all .25s
+        z-index: 2
+      &:hover
+        a
+          color: $dark-indigo
+        &::before
+          top: 0
+      &.active
+        a
+          background-color: #fff
+          border-top-left-radius: 5px
+          border-top-right-radius: 5px
+          color: $dark-indigo
